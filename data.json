@@ -1,0 +1,48 @@
+{
+    "data": [
+        {
+            "label": "IPM",
+            "elements": [
+                "Test1",
+                "Test2",
+                "Test3"
+            ]
+        },
+        {
+            "label": "Stand up",
+            "elements": [
+                "Test4"
+            ]
+        },
+        {
+            "label": "Kick Off",
+            "elements": [
+                "Test5",
+                "Test6"
+            ]
+        },
+        {
+            "label": "Desk Check",
+            "elements": [
+                "Test7",
+                "Test8"
+            ]
+        },
+        {
+            "label": "Retro",
+            "elements": [
+                "Test9",
+                "Test10",
+                "Test11",
+                "Test12"
+            ]
+        },
+        {
+            "label": "Showcase",
+            "elements": [
+                "Test13",
+                "Test14"
+            ]
+        }
+    ]
+}
