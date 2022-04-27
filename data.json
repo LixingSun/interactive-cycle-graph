@@ -1,47 +1,100 @@
 {
     "data": [
         {
-            "label": "IPM",
+            "type": "point",
+            "label": "Point 1",
             "elements": [
-                "Test1",
-                "Test2",
-                "Test3"
+                "Element1",
+                "Element2",
+                "Element3"
             ]
         },
         {
-            "label": "Stand up",
+            "type": "point",
+            "label": "Point 2",
             "elements": [
-                "Test4"
+                "Element4",
+                "Element5"
             ]
         },
         {
-            "label": "Kick Off",
+            "type": "point",
+            "label": "Point 3",
             "elements": [
-                "Test5",
-                "Test6"
+                "Element6",
+                "Element7",
+                "Element8",
+                "Element9"
             ]
         },
         {
-            "label": "Desk Check",
-            "elements": [
-                "Test7",
-                "Test8"
+            "type": "cycle",
+            "label": "C1",
+            "points": [
+                {
+                    "type": "point",
+                    "label": "Sub-Point 1",
+                    "elements": [
+                        "Element 1.1",
+                        "Element 1.2"
+                    ]
+                },
+                {
+                    "type": "point",
+                    "label": "Sub-Point 2",
+                    "elements": [
+                        "Element 2.1",
+                        "Element 2.2"
+                    ]
+                },
+                {
+                    "type": "point",
+                    "label": "Sub-Point 3",
+                    "elements": [
+                        "Element 3.1",
+                        "Element 3.2"
+                    ]
+                }
             ]
         },
         {
-            "label": "Retro",
+            "type": "cycle",
+            "label": "C2",
+            "points": []
+        },
+        {
+            "type": "cycle",
+            "label": "C3",
+            "points": []
+        },
+        {
+            "type": "cycle",
+            "label": "C4",
+            "points": []
+        },
+        {
+            "type": "cycle",
+            "label": "C5",
+            "points": []
+        },
+        {
+            "type": "cycle",
+            "label": "C6",
+            "points": []
+        },
+        {
+            "type": "point",
+            "label": "Point 4",
             "elements": [
-                "Test9",
-                "Test10",
-                "Test11",
-                "Test12"
+                "Element10"
             ]
         },
         {
-            "label": "Showcase",
+            "type": "point",
+            "label": "Point 5",
             "elements": [
-                "Test13",
-                "Test14"
+                "Element11",
+                "Element12"
             ]
         }
     ]
