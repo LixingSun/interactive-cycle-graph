@@ -1,11 +1,11 @@
 export interface IPoint {
-  type: string;
+  id: number;
   label: string;
   elements: string[];
 }
 
 export interface ICycle {
-  type: string;
+  id: number;
   label: string;
   points: IPoint[];
 }

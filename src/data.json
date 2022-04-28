@@ -1,7 +1,6 @@
 {
     "data": [
         {
-            "type": "point",
             "label": "Point 1",
             "elements": [
                 "Element1",
@@ -10,7 +9,6 @@
             ]
         },
         {
-            "type": "point",
             "label": "Point 2",
             "elements": [
                 "Element4",
@@ -18,7 +16,6 @@
             ]
         },
         {
-            "type": "point",
             "label": "Point 3",
             "elements": [
                 "Element6",
@@ -28,11 +25,10 @@
             ]
         },
         {
-            "type": "cycle",
             "label": "C1",
             "points": [
                 {
-                    "type": "point",
+    
                     "label": "Sub-Point 1",
                     "elements": [
                         "Element 1.1",
@@ -40,7 +36,7 @@
                     ]
                 },
                 {
-                    "type": "point",
+    
                     "label": "Sub-Point 2",
                     "elements": [
                         "Element 2.1",
@@ -48,7 +44,7 @@
                     ]
                 },
                 {
-                    "type": "point",
+    
                     "label": "Sub-Point 3",
                     "elements": [
                         "Element 3.1",
@@ -58,39 +54,32 @@
             ]
         },
         {
-            "type": "cycle",
             "label": "C2",
             "points": []
         },
         {
-            "type": "cycle",
             "label": "C3",
             "points": []
         },
         {
-            "type": "cycle",
             "label": "C4",
             "points": []
         },
         {
-            "type": "cycle",
             "label": "C5",
             "points": []
         },
         {
-            "type": "cycle",
             "label": "C6",
             "points": []
         },
         {
-            "type": "point",
             "label": "Point 4",
             "elements": [
                 "Element10"
             ]
         },
         {
-            "type": "point",
             "label": "Point 5",
             "elements": [
                 "Element11",
