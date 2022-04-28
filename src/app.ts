@@ -35,7 +35,18 @@ const activatePoint = (id: number) => {
   activeEntityId = id;
 };
 
-const updateElements = (elements: string[]) => {
+const updateElements = async (label: string, elements: string[]) => {
+  await Promise.all([
+    activeLabel.transition().style("opacity", 0).end(),
+    informationSVG
+      .selectAll("text.element")
+      .transition()
+      .style("opacity", 0)
+      .end(),
+  ]);
+
+  activeLabel.text(label).transition().style("opacity", 1);
+
   informationSVG
     .attr(
       "height",
@@ -54,17 +65,18 @@ const updateElements = (elements: string[]) => {
         index * (elementFontSize + elementSpace) + titleFontSize + titleSpace
     )
     .style("font-size", elementFontSize)
-    .style("alignment-baseline", "hanging");
+    .style("alignment-baseline", "hanging")
+    .style("opacity", 0)
+    .transition()
+    .style("opacity", 1);
 };
 
 buildPoints(graphSVG, points, (_, d) => {
   activatePoint(d.id);
-  activeLabel.text(d.label);
-  updateElements(d.elements);
+  updateElements(d.label, d.elements);
 });
 
 buildCycles(graphSVG, cycles, (_, d) => {
   activatePoint(d.id);
-  activeLabel.text(d.label);
-  updateElements(d.elements);
+  updateElements(d.label, d.elements);
 });
