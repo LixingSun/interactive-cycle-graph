@@ -18,5 +18,5 @@ export const cycleStrokeColor = "#999999";
 
 export const titleFontSize = 32;
 export const titleSpace = 24;
-export const elementFontSize = 18;
-export const elementSpace = 12;
+export const noteFontSize = 18;
+export const noteSpace = 12;

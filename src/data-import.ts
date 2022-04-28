@@ -5,11 +5,11 @@ let currentId = 0;
 let sourceData: (IPoint | ICycle)[] = [];
 
 source.data.forEach((entity) => {
-  if ("elements" in entity) {
+  if ("notes" in entity) {
     sourceData.push({
       id: currentId,
       label: entity.label,
-      elements: entity.elements!,
+      notes: entity.notes!,
     });
     currentId++;
   } else if ("points" in entity) {
@@ -19,7 +19,7 @@ source.data.forEach((entity) => {
       points.push({
         id: currentId,
         label: point.label,
-        elements: point.elements,
+        notes: point.notes,
       });
       currentId++;
     });

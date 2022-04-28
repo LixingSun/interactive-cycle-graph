@@ -66,11 +66,11 @@ export const buildEntityData = (
   const pathInterval = path.node()?.getTotalLength()! / (sourceData.length - 1);
 
   sourceData.forEach((item, index) => {
-    if ("elements" in item) {
+    if ("notes" in item) {
       points.push({
         id: item.id,
         label: item.label,
-        elements: item.elements,
+        notes: item.notes,
         position: path.node()?.getPointAtLength(index * pathInterval)!,
       });
     } else if ("points" in item) {
@@ -125,7 +125,7 @@ export const buildPoints = (
   points: IPointData[],
   onClick: (_: any, d: IPointData) => void
 ) => {
-  const pointElements = graphSVG
+  const pointNotes = graphSVG
     .selectAll("g.point")
     .data(points)
     .join("g")
@@ -135,7 +135,7 @@ export const buildPoints = (
     .style("cursor", "pointer")
     .on("click", onClick);
 
-  pointElements
+  pointNotes
     .append("circle")
     .attr("r", pointSize)
     .style("fill", pointBgColor)
@@ -145,7 +145,7 @@ export const buildPoints = (
     )
     .style("stroke-width", "4");
 
-  pointElements
+  pointNotes
     .append("text")
     .attr("y", pointSize + pointLabelSpace)
     .attr("font-size", pointLabelFontSize)
@@ -158,28 +158,28 @@ export const buildCycles = (
   cycles: ICycleData[],
   onClick: (_: any, d: IPointData) => void
 ) => {
-  const cycleElements = graphSVG
+  const cycleNotes = graphSVG
     .selectAll("g.cycle")
     .data(cycles)
     .join("g")
     .attr("class", "cycle")
     .attr("transform", (d) => `translate(${d.position.x}, ${d.position.y})`);
 
-  cycleElements
+  cycleNotes
     .append("circle")
     .attr("r", cycleSize)
     .style("fill", cycleBgColor)
     .style("stroke", cycleStrokeColor)
     .style("stroke-width", "2");
 
-  cycleElements
+  cycleNotes
     .append("text")
     .attr("text-anchor", "middle")
     .attr("alignment-baseline", "central")
     .attr("font-size", cycleLabelFontSize)
     .text((d) => d.label);
 
-  const subPointElements = cycleElements
+  const subPointNotes = cycleNotes
     .selectAll("g.sub-point")
     .data((cycleData) =>
       d3.range(0, 2 * Math.PI, (2 * Math.PI) / cycleData.points.length).map(
@@ -191,7 +191,7 @@ export const buildCycles = (
             ),
             id: cycleData.points[i].id,
             label: cycleData.points[i].label,
-            elements: cycleData.points[i].elements,
+            notes: cycleData.points[i].notes,
           } as IPointData)
       )
     )
@@ -202,7 +202,7 @@ export const buildCycles = (
     .style("cursor", "pointer")
     .on("click", onClick);
 
-  subPointElements
+  subPointNotes
     .append("circle")
     .attr("r", pointSize)
     .style("fill", pointBgColor)
@@ -212,7 +212,7 @@ export const buildCycles = (
     )
     .style("stroke-width", "4");
 
-  subPointElements
+  subPointNotes
     .append("text")
     .attr("y", pointSize + pointLabelSpace)
     .attr("font-size", pointLabelFontSize)

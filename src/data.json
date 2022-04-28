@@ -2,26 +2,26 @@
     "data": [
         {
             "label": "Point 1",
-            "elements": [
-                "Element1",
-                "Element2",
-                "Element3"
+            "notes": [
+                "Note1",
+                "Note2",
+                "Note3"
             ]
         },
         {
             "label": "Point 2",
-            "elements": [
-                "Element4",
-                "Element5"
+            "notes": [
+                "Note4",
+                "Note5"
             ]
         },
         {
             "label": "Point 3",
-            "elements": [
-                "Element6",
-                "Element7",
-                "Element8",
-                "Element9"
+            "notes": [
+                "Note6",
+                "Note7",
+                "Note8",
+                "Note9"
             ]
         },
         {
@@ -30,25 +30,25 @@
                 {
     
                     "label": "Sub-Point 1",
-                    "elements": [
-                        "Element 1.1",
-                        "Element 1.2"
+                    "notes": [
+                        "Note 1.1",
+                        "Note 1.2"
                     ]
                 },
                 {
     
                     "label": "Sub-Point 2",
-                    "elements": [
-                        "Element 2.1",
-                        "Element 2.2"
+                    "notes": [
+                        "Note 2.1",
+                        "Note 2.2"
                     ]
                 },
                 {
     
                     "label": "Sub-Point 3",
-                    "elements": [
-                        "Element 3.1",
-                        "Element 3.2"
+                    "notes": [
+                        "Note 3.1",
+                        "Note 3.2"
                     ]
                 }
             ]
@@ -75,15 +75,15 @@
         },
         {
             "label": "Point 4",
-            "elements": [
-                "Element10"
+            "notes": [
+                "Note10"
             ]
         },
         {
             "label": "Point 5",
-            "elements": [
-                "Element11",
-                "Element12"
+            "notes": [
+                "Note11",
+                "Note12"
             ]
         }
     ]

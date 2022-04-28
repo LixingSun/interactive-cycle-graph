@@ -1,8 +1,8 @@
 import * as d3 from "d3";
 import {
   cycleBgColor,
-  elementFontSize,
-  elementSpace,
+  noteFontSize,
+  noteSpace,
   titleFontSize,
   titleSpace,
 } from "./config";
@@ -35,11 +35,11 @@ const activatePoint = (id: number) => {
   activeEntityId = id;
 };
 
-const updateElements = async (label: string, elements: string[]) => {
+const updateActiveInformation = async (label: string, notes: string[]) => {
   await Promise.all([
     activeLabel.transition().style("opacity", 0).end(),
     informationSVG
-      .selectAll("text.element")
+      .selectAll("text.note")
       .transition()
       .style("opacity", 0)
       .end(),
@@ -50,21 +50,21 @@ const updateElements = async (label: string, elements: string[]) => {
   informationSVG
     .attr(
       "height",
-      (elementFontSize + elementSpace) * elements.length +
+      (noteFontSize + noteSpace) * notes.length +
         titleFontSize +
         titleSpace
     )
-    .selectAll("text.element")
-    .data(elements)
+    .selectAll("text.note")
+    .data(notes)
     .join("text")
     .text((text) => text)
-    .attr("class", "element")
+    .attr("class", "note")
     .attr(
       "y",
       (_, index) =>
-        index * (elementFontSize + elementSpace) + titleFontSize + titleSpace
+        index * (noteFontSize + noteSpace) + titleFontSize + titleSpace
     )
-    .style("font-size", elementFontSize)
+    .style("font-size", noteFontSize)
     .style("alignment-baseline", "hanging")
     .style("opacity", 0)
     .transition()
@@ -73,10 +73,10 @@ const updateElements = async (label: string, elements: string[]) => {
 
 buildPoints(graphSVG, points, (_, d) => {
   activatePoint(d.id);
-  updateElements(d.label, d.elements);
+  updateActiveInformation(d.label, d.notes);
 });
 
 buildCycles(graphSVG, cycles, (_, d) => {
   activatePoint(d.id);
-  updateElements(d.label, d.elements);
+  updateActiveInformation(d.label, d.notes);
 });

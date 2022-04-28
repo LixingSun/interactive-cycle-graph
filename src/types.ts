@@ -1,7 +1,7 @@
 export interface IPoint {
   id: number;
   label: string;
-  elements: string[];
+  notes: string[];
 }
 
 export interface ICycle {
