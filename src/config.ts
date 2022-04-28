@@ -1,6 +1,6 @@
 export const graphTitle = "Graph Title";
 
-export const graphSize = 900;
+export const minGraphSize = 800;
 export const numSpirals = 2;
 export const spiralStart = 0;
 export const spiralEnd = 1.25;

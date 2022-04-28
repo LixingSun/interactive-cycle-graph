@@ -1,7 +1,7 @@
 import * as d3 from "d3";
 import {
   numSpirals,
-  graphSize,
+  minGraphSize,
   spiralStart,
   spiralEnd,
   graphTitle,
@@ -18,7 +18,16 @@ import {
 } from "./config";
 import { IPoint, ICycle, IPointData, ICycleData } from "./types";
 
+let graphSize: number;
+
 export const buildLayout = () => {
+  graphSize = Number(
+    d3.max([
+      minGraphSize,
+      Number(d3.min([window.innerHeight, window.innerWidth])) * 0.9,
+    ])
+  );
+
   const graphSVG = d3
     .select("svg#graph")
     .attr("width", graphSize)
