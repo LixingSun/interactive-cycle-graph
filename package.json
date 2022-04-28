@@ -1,12 +1,11 @@
 {
   "name": "interactive-cycle-graph",
   "version": "1.0.0",
-  "description": "",
+  "description": "An interactive spiral cycle graph built by D3.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html --public-url ./"
   },
-  "author": "",
   "devDependencies": {
     "@types/d3": "^7.1.0",
     "parcel": "^2.5.0",

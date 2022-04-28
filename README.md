@@ -1,10 +1,21 @@
 # Interactive Cycle Graph
 
-An cycle graph built by [D3.js](https://d3js.org/)
+An interactive spiral cycle graph built by [D3.js](https://d3js.org/)
 
-## How to Run
+[Demo](https://lixingsun.github.io/interactive-cycle-graph/)
+
+## Getting started
 ```
-npm start
+// Install Dependencies
+npm install
+
+// Start local server
+npm run start
+```
+
+## Build
+```
+npm run build
 ```
 
 ## Reference
